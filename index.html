@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testpine - Blog</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="css/style.css?v=13" >
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bd-navbar bg-secondary" id="navbarId">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="img/testpine-logo-white.svg" alt="Testpine logo" width="197" height="20"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse pt-3 pb-3" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-link active pl-4" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link pl-4" href="createBlog.html">Create Blog</a>
+              
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <main role="main">
+    <!-- Entrance -->
+
+      <div id="carouselExampleCaptions" class="carousel slide pb-2 mb-5" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row pt-4">
+                <div class="col-12 col-lg-7 align-self-center">
+                  <h3>Welcome to</h3>
+                  <h1>Testpine Blog</h1>
+                  <h5 class="mt-3 font-weight-normal text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias itaque culpa voluptas minus quam iusto, possimus quibusdam corrupti sed similique.</h5>
+                </div>
+                <div class="col-12 col-lg-5 align-self-center mt-2" id="hero-img"></div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row pt-4">
+                <div class="col-12 col-lg-7 align-self-center">
+                  <h3>Lorem, ipsum dolor.</h3>
+                  <h1>Lorem, ipsum.</h1>
+                  <h5 class="mt-3 font-weight-normal text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias itaque culpa voluptas minus quam iusto, possimus quibusdam corrupti sed similique.</h5>
+                </div>
+                <div class="col-12 col-lg-5 align-self-center mt-2" id="working-img"></div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row pt-4">
+                <div class="col-12 col-lg-7 align-self-center">
+                  <h3>Lorem, ipsum dolor.</h3>
+                  <h1>Lorem, ipsum.</h1>
+                  <h5 class="mt-3 font-weight-normal text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias itaque culpa voluptas minus quam iusto, possimus quibusdam corrupti sed similique.</h5>
+                </div>
+                <div class="col-12 col-lg-5 align-self-center mt-2" id="teamWork-img"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev arrow-icons" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="carousel-control-next arrow-icons" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      
+      <!-- Category Filter -->
+      <div class="container blogList mt-5" id="blogListId">
+        <div class="container categories pt-2" id="categoriesId">
+          <button class="accordion text-capitalize" id="categories-header">Category filter</button>
+          <div class="panel">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 col-lg-4">
+                  <button class="btn btn-secondary mt-3" onclick="filterSelection('all')">All Blogs</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                  <button class="btn btn-primary mt-3" onclick="filterSelection('category-1')">Category-1</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                  <button class="btn btn-danger mt-3" onclick="filterSelection('category-2')">Category-2</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                  <button class="btn btn-success mt-3" onclick="filterSelection('category-3')">Category-3</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                  <button class="btn btn-dark mt-3" onclick="filterSelection('category-4')">Category-4</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                  <button class="btn btn-info mt-3" onclick="filterSelection('category-5')">Category-5</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="pb-2" >
+
+        </div>
+      <!-- Blog List -->
+        <div class="row">
+          <div class="col-12 col-lg-6 blogFilter category-1">
+            <div class="blogContainer border rounded p-3">
+                <div class="row pt-4">
+                  <div class="col-7">
+                    <h2><a class="text-reset text-decoration-none" href="blogPages/blog1.html">Blog - 1</a></h2>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">Author Name</h6>
+                  </div>
+                </div>
+                
+              <hr >
+    
+              <a href="blogPages/blog1.html"><img src="img/blog/blog-1.jpg" class="mb-3" alt="Blog-1"></a>
+      
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt deleniti impedit, vel aliquid sint iusto soluta amet quam cum incidunt beatae earum, provident exercitationem? Ut vel, in, nemo dolor quaerat unde adipisci, cum odio qui rerum vero similique a dolorum laboriosam blanditiis explicabo dolores. Hic delectus unde ducimus porro repellendus quos dolorem saepe a, deleniti fuga odio nam aspernatur sequi nemo omnis officiis accusantium vel eius quo. Suscipit reprehenderit neque nostrum vel similique culpa cum optio possimus, nobis quis necessitatibus molestiae enim cumque doloremque facilis sint ex sequi nam labore quos maiores facere earum. Possimus quae excepturi repudiandae facilis rem provident culpa mollitia temporibus illum? Quidem magnam, nisi corporis at saepe ducimus repudiandae molestiae similique mollitia et amet ab maiores? Fuga quasi a, quidem, sed, aut dolorum illum aliquam distinctio optio quaerat accusamus velit eum minus veniam provident itaque. Quis ipsam laboriosam fuga quas iure optio perferendis, reiciendis aut dolores nesciunt! Dignissimos eveniet eos non ex suscipit facilis modi possimus neque consequuntur voluptatem nesciunt et quis animi reiciendis laudantium magnam hic placeat ratione ut, nisi accusamus? Cum rem, dolor possimus impedit inventore magni ullam facere nisi quia, corporis aut doloribus iusto. Nulla, reprehenderit accusamus. Nam perspiciatis itaque error qui asperiores, eos modi ex necessitatibus sapiente libero! Ex quae eum cum cupiditate quaerat modi nulla ab? Labore accusamus ullam veritatis fugiat non alias voluptatibus eveniet quisquam exercitationem neque quo nesciunt tempore ab, natus asperiores soluta corporis nam cumque velit eius! Labore id quaerat, quo sunt excepturi ratione iure deserunt sit aliquam voluptatum at totam esse, quasi inventore consequuntur dicta libero modi obcaecati ullam dolorum officiis voluptates! Pariatur veritatis mollitia fugiat ex provident voluptatem totam nostrum voluptates minus incidunt, delectus iste amet officiis ipsam dolorum itaque! Cupiditate, dicta, quisquam rem unde suscipit error possimus rerum odit iste itaque consequuntur voluptatibus atque eos?</p>
+    
+              <hr >
+    
+                <div class="row">
+                  <div class="col-7">
+                    <button class="btn btn-primary" onclick="filterSelection('category-1')">Category-1</button>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">12.01.2021</h6>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 blogFilter category-2">
+            <div class="blogContainer border rounded p-3">
+                <div class="row pt-4">
+                  <div class="col-7">
+                    <h2><a class="text-reset text-decoration-none" href="blogPages/blog2.html">Blog - 2</a></h2>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">Author Name</h6>
+                  </div>
+                </div>
+                
+              <hr >
+    
+                <a href="blogPages/blog2.html"><img src="img/blog/blog-2.jpg" class="mb-3" alt="Blog-2"></a>
+      
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatem odio fugiat et dolor assumenda, commodi doloremque sit architecto ullam. Laboriosam, repudiandae sit. Saepe suscipit unde voluptatum corrupti, nesciunt beatae qui libero repudiandae exercitationem, explicabo consequatur praesentium animi quaerat illum iure. Dolorum neque cumque at voluptatibus beatae. Quisquam quia eos rerum. Ex tempora minus fuga iusto facere quaerat libero enim ducimus deleniti nesciunt id veniam obcaecati cupiditate impedit, distinctio amet, incidunt, officiis harum dolorem ipsa hic assumenda. Mollitia maiores suscipit, minima illo reprehenderit ullam cum alias voluptatum totam aliquam excepturi omnis sint molestiae odio deleniti, quas recusandae id ratione modi.</p>
+    
+              <hr >
+    
+                <div class="row">
+                  <div class="col-7">
+                    <button class="btn btn-danger" onclick="filterSelection('category-2')">Category-2</button>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">12.01.2021</h6>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 blogFilter category-5">
+            <div class="blogContainer border rounded p-3">
+                <div class="row pt-4">
+                  <div class="col-7">
+                    <h2><a class="text-reset text-decoration-none" href="blogPages/blog3.html">Blog - 3</a></h2>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">Author Name</h6>
+                  </div>
+                </div>
+                
+              <hr >
+    
+              <a href="blogPages/blog3.html"><img src="img/blog/blog-3.jpg" class="mb-3" alt="Blog-3"></a>
+      
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatem odio fugiat et dolor assumenda, commodi doloremque sit architecto ullam. Laboriosam, repudiandae sit. Saepe suscipit unde voluptatum corrupti, nesciunt beatae qui libero repudiandae exercitationem, explicabo consequatur praesentium animi quaerat illum iure. Dolorum neque cumque at voluptatibus beatae. Quisquam quia eos rerum. Ex tempora minus fuga iusto facere quaerat libero enim ducimus deleniti nesciunt id veniam obcaecati cupiditate impedit, distinctio amet, incidunt, officiis harum dolorem ipsa hic assumenda. Mollitia maiores suscipit, minima illo reprehenderit ullam cum alias voluptatum totam aliquam excepturi omnis sint molestiae odio deleniti, quas recusandae id ratione modi.</p>
+    
+              <hr >
+    
+                <div class="row">
+                  <div class="col-7">
+                    <button class="btn btn-info" onclick="filterSelection('category-5')">Category-5</button>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">12.01.2021</h6>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 blogFilter category-4">
+            <div class="blogContainer border rounded p-3">
+                <div class="row pt-4">
+                  <div class="col-7">
+                    <h2><a class="text-reset text-decoration-none" href="blogPages/blog4.html">Blog - 4</a></h2>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">Author Name</h6>
+                  </div>
+                </div>
+                
+              <hr >
+    
+              <a href="blogPages/blog4.html"><img src="img/blog/blog-4.jpeg" class="mb-3" alt="Blog-4"></a>
+      
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatem odio fugiat et dolor assumenda, commodi doloremque sit architecto ullam. Laboriosam, repudiandae sit. Saepe suscipit unde voluptatum corrupti, nesciunt beatae qui libero repudiandae exercitationem, explicabo consequatur praesentium animi quaerat illum iure. Dolorum neque cumque at voluptatibus beatae. Quisquam quia eos rerum. Ex tempora minus fuga iusto facere quaerat libero enim ducimus deleniti nesciunt id veniam obcaecati cupiditate impedit, distinctio amet, incidunt, officiis harum dolorem ipsa hic assumenda. Mollitia maiores suscipit, minima illo reprehenderit ullam cum alias voluptatum totam aliquam excepturi omnis sint molestiae odio deleniti, quas recusandae id ratione modi.</p>
+    
+              <hr >
+    
+                <div class="row">
+                  <div class="col-7">
+                    <button class="btn btn-dark" onclick="filterSelection('category-4')">Category-4</button>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">12.01.2021</h6>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 blogFilter category-1">
+            <div class="blogContainer border rounded p-3">
+                <div class="row pt-4">
+                  <div class="col-7">
+                    <h2><a class="text-reset text-decoration-none" href="blogPages/blog5.html">Blog - 5</a></h2>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">Author Name</h6>
+                  </div>
+                </div>
+                
+              <hr >
+    
+              <a href="blogPages/blog5.html"><img src="img/blog/blog-5.png" class="mb-3" alt="Blog-5"></a>
+      
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatem odio fugiat et dolor assumenda, commodi doloremque sit architecto ullam. Laboriosam, repudiandae sit. Saepe suscipit unde voluptatum corrupti, nesciunt beatae qui libero repudiandae exercitationem, explicabo consequatur praesentium animi quaerat illum iure. Dolorum neque cumque at voluptatibus beatae. Quisquam quia eos rerum. Ex tempora minus fuga iusto facere quaerat libero enim ducimus deleniti nesciunt id veniam obcaecati cupiditate impedit, distinctio amet, incidunt, officiis harum dolorem ipsa hic assumenda. Mollitia maiores suscipit, minima illo reprehenderit ullam cum alias voluptatum totam aliquam excepturi omnis sint molestiae odio deleniti, quas recusandae id ratione modi.</p>
+    
+              <hr >
+    
+                <div class="row">
+                  <div class="col-7">
+                    <button class="btn btn-primary" onclick="filterSelection('category-1')">Category-1</button>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="pt-2 float-right text-secondary">12.01.2021</h6>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+  <footer class="text-muted bg-light">
+    <div class="container-fluid p-3 p-md-5">
+        <ul class="d-flex justify-content-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="createBlog.html">Create Blog</a></li>
+          </ul>
+          <p class="text-center">© Copyright Testpine 2020. All Rights Reserved.</p>
+    </div>
+  </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Query String -->
+    <script>
+      function queryString() {
+          var qs = location.search.substring(1,location.search.length).replace(/(%20|\+)/g," ");
+          if(arguments.length == 0 || qs == "") return qs; else qs = "&" + qs + "&";
+          return qs.substring(qs.indexOf("=", qs.indexOf("&" + arguments[0] + "=") + 1) + 1, qs.indexOf("&", qs.indexOf("&" + arguments[0] + "=") + 1));
+      }
+    </script>
+
+    <!-- Categories Filter -->
+    <script>
+
+      var category = queryString('category');
+
+      if(category == "") {
+        category = "all"
+      }
+      
+      filterSelection(category)
+
+      var control = false;
+      var n = 0;
+
+      function filterSelection(c) {
+        
+        $('.blogFilter').css('opacity', '0');
+
+        if(control === true) {
+          n = 500;
+        }
+
+        setTimeout(function() {  
+          document.querySelector('#categories-header').innerHTML = "Category filter: " + c;
+          var x, i;
+          x = document.getElementsByClassName("blogFilter");
+          if (c == "all") {
+            c = "";
+            document.getElementById("categoriesId").classList.remove("show");
+          } 
+          else{
+            document.querySelector('#categoriesId').classList.add('show');
+          }
+          for (i = 0; i < x.length; i++) {
+            removeClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+          }
+          control = true;
+          setTimeout(function() {
+            $('.blogFilter').css('opacity', '1');
+           }, 100);
+        }, n);
+        
+        
+      }
+      
+      function addClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function removeClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      </script>
+
+      <!-- Scroll -->
+      <script>
+        $(window).scroll(function(event) {
+          if($(window).scrollTop() > 200) {
+            document.querySelector('#navbarNavAltMarkup').classList.replace("pt-3", "pt-0");
+            document.querySelector('#navbarNavAltMarkup').classList.replace("pb-3", "pb-0");
+            document.querySelector('#navbarId').classList.replace("bg-secondary", "bg-transparent");
+          }
+          else if($(window).scrollTop() < 100) {
+            document.querySelector('#navbarNavAltMarkup').classList.replace("pt-0", "pt-3");
+            document.querySelector('#navbarNavAltMarkup').classList.replace("pb-0", "pb-3");
+            document.querySelector('#navbarId').classList.replace("bg-transparent", "bg-secondary");
+          }
+        });
+      </script>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+
+</body>
+</html>

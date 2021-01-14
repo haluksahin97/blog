@@ -1,0 +1,219 @@
+.bg-secondary {
+  background-color: #2f2e41 !important; }
+
+.bg-transparent {
+  background-color: #2f2e417a !important; }
+  .bg-transparent:hover {
+    background-color: #2f2e41 !important; }
+
+#navbarId {
+  transition: .5s; }
+
+#navbarNavAltMarkup {
+  transition: .5s; }
+
+h2 {
+  color: #2f2e41 !important; }
+
+#carouselExampleCaptions {
+  max-height: 90vh; }
+  #carouselExampleCaptions ol {
+    margin-bottom: 0px !important; }
+    #carouselExampleCaptions ol li {
+      background-color: #2f2e41 !important; }
+  @media screen and (min-width: 1600px) {
+    #carouselExampleCaptions .carousel-control-next {
+      justify-content: flex-start !important; } }
+  @media screen and (min-width: 993px) and (max-width: 1300px) {
+    #carouselExampleCaptions .carousel-control-next {
+      justify-content: flex-end !important;
+      margin-right: 10px; } }
+  @media screen and (min-width: 1600px) {
+    #carouselExampleCaptions .carousel-control-prev {
+      justify-content: flex-end !important; } }
+  @media screen and (min-width: 993px) and (max-width: 1300px) {
+    #carouselExampleCaptions .carousel-control-prev {
+      justify-content: flex-start !important;
+      margin-left: 10px; } }
+  #carouselExampleCaptions .fas {
+    color: #2f2e41 !important; }
+  @media screen and (max-width: 993px) {
+    #carouselExampleCaptions .carousel-inner {
+      max-height: 85vh; } }
+  #carouselExampleCaptions #hero-img {
+    background: url("../img/hero.svg") no-repeat center center;
+    height: 350px;
+    width: 350px; }
+  #carouselExampleCaptions #working-img {
+    background: url("../img/working.png") no-repeat center center;
+    height: 350px;
+    width: 350px; }
+  #carouselExampleCaptions #teamWork-img {
+    background: url("../img/team-working.jpg") no-repeat center center;
+    height: 350px;
+    width: 350px; }
+
+.blogList .accordion {
+  background-color: #2f2e41;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s; }
+.blogList .active, .blogList .accordion:hover {
+  background-color: #2f2e41db; }
+.blogList .accordion:after {
+  content: '\002B';
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px; }
+.blogList #categoriesId {
+  padding-right: 0px !important;
+  padding-left: 0px !important; }
+  .blogList #categoriesId > .active:after {
+    content: "\2212"; }
+.blogList .panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; }
+  .blogList .panel .btn {
+    width: inherit !important; }
+  .blogList .panel > .container {
+    padding-right: 0px !important;
+    padding-left: 0px !important; }
+.blogList .categories {
+  display: none; }
+.blogList .show {
+  display: block !important; }
+.blogList .col-lg-6 {
+  margin-bottom: 25px !important; }
+.blogList .blogFilter {
+  transition: .5s;
+  float: left !important;
+  display: none; }
+.blogList .blogContainer {
+  transition: .3s; }
+  .blogList .blogContainer:hover {
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 8px 0 rgba(0, 0, 0, 0.19); }
+  .blogList .blogContainer p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .blogList .blogContainer img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 50%; }
+  .blogList .blogContainer .btn {
+    font-size: 12px; }
+  @media screen and (max-width: 993px) {
+    .blogList .blogContainer {
+      margin-bottom: 25px;
+      height: auto; } }
+  @media screen and (min-width: 993px) {
+    .blogList .blogContainer {
+      height: 100%; } }
+.blogList > .row {
+  min-height: 561px; }
+
+@media screen and (min-width: 993px) {
+  .blogCreate {
+    width: 700px;
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 35px;
+    margin-top: 40px !important; } }
+.blogCreate .header h1 {
+  color: #2f2e41; }
+.blogCreate .header hr {
+  margin-top: 0;
+  border-width: 2px;
+  background-color: #2f2e41; }
+.blogCreate label {
+  margin: 0;
+  color: #2f2e41; }
+.blogCreate .custom-file-label {
+  left: 15px !important;
+  right: 15px !important; }
+.blogCreate .form-check-input {
+  cursor: pointer; }
+.blogCreate .form-check-label {
+  cursor: pointer; }
+.blogCreate .btn-success {
+  background-color: #2fc19a !important;
+  width: 30%; }
+  .blogCreate .btn-success:hover {
+    background-color: #24a281 !important; }
+.blogCreate .btn {
+  transition: .3s; }
+  .blogCreate .btn:hover {
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 8px 0 rgba(0, 0, 0, 0.19); }
+
+.blogPages .header h1 {
+  color: #2f2e41; }
+.blogPages .header hr {
+  margin-top: 0;
+  border-width: 4px;
+  background-color: #2f2e41; }
+.blogPages img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.24), 0 5px 8px 0 rgba(0, 0, 0, 0.19); }
+.blogPages p {
+  text-align: justify;
+  font-size: 18px; }
+.blogPages .authorName-move {
+  transition: .5s;
+  position: fixed !important;
+  opacity: 1;
+  top: 30%; }
+  @media screen and (min-width: 1600px) {
+    .blogPages .authorName-move {
+      left: 85%; } }
+  @media screen and (min-width: 1400px) and (max-width: 1599px) {
+    .blogPages .authorName-move {
+      left: 90%; } }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .blogPages .authorName-move {
+      left: 93%;
+      font-size: 11px !important; } }
+.blogPages .btn-move {
+  transition: .5s;
+  position: fixed !important;
+  opacity: 1;
+  top: 35%; }
+  @media screen and (min-width: 1600px) {
+    .blogPages .btn-move {
+      left: 85%; } }
+  @media screen and (min-width: 1400px) and (max-width: 1599px) {
+    .blogPages .btn-move {
+      left: 90%; } }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .blogPages .btn-move {
+      left: 93%;
+      font-size: 11px !important; } }
+.blogPages .opacity-move {
+  opacity: 0; }
+.blogPages .informations {
+  min-height: 61px; }
+
+footer ul {
+  margin-right: 30px !important; }
+footer li {
+  display: inline-block !important; }
+  footer li a {
+    color: #495057 !important;
+    margin-left: 20px; }
+    footer li a:hover {
+      color: #2fc19a !important; }
+
+/*# sourceMappingURL=style.css.map */
